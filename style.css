@@ -1,69 +1,69 @@
 body {
   margin: 0;
+  padding: 0;
   overflow: hidden;
-  background-color: skyblue;
+  background-color: #87CEEB;
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#start-screen, #game-over-screen {
   text-align: center;
 }
 
-#pontuacao, #timer, #legenda {
+#game-area {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: none; /* Inicialmente escondido */
+}
+
+#game-area.active {
+  display: block; /* Mostra a área do jogo */
+}
+
+#score, #timer {
   position: absolute;
   top: 10px;
-  left: 10px;
-  font-size: 20px;
-  background: rgba(0, 0, 0, 0.5);
+  font-size: 24px;
   color: white;
-  padding: 10px;
-  border-radius: 5px;
+  z-index: 1000;
+}
+
+#score {
+  left: 10px;
 }
 
 #timer {
-  left: auto;
   right: 10px;
 }
 
-#legenda {
-  top: 50px;
-}
-
-.balao {
+.balloon {
   position: absolute;
   border-radius: 50%;
   cursor: pointer;
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  color: white;
   font-size: 14px;
   font-weight: bold;
-  color: white;
-  text-shadow: 1px 1px 2px black;
 }
 
-.balao.estourado {
-  transform: scale(1.5);
-  opacity: 0;
+.balloon:hover {
+  transform: scale(1.1);
 }
 
-#startButton {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-  padding: 10px 20px;
-  cursor: pointer;
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(0); }
 }
 
-#gameOver {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 20px;
-  font-size: 30px;
-  border-radius: 10px;
+.hidden {
+  display: none; /* Esconde elementos */
 }
