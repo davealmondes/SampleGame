@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogo do Clique</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoura Balão</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Jogo do Clique</h1>
-    <p id="score">Pontuação: 0</p>
-    <p id="timer">Tempo: 30</p>
-    <button id="target">Clique Aqui!</button>
-    <div id="gameOver" class="hidden">
-      <h2>Game Over!</h2>
-      <p id="finalScore">Sua pontuação: 0</p>
-      <button id="restart">Jogar Novamente</button>
-    </div>
-  </div>
-  <script src="script.js"></script>
+    <button id="startButton">Iniciar Jogo</button>
+    <div id="pontuacao">Pontos: 0</div>
+    <div id="timer">Tempo: 30</div>
+    <div id="legenda">Balões menores valem mais pontos!</div>
+    <div id="gameOver">Game Over! Pontuação: <span id="finalScore"></span></div>
+    <script src="script.js"></script>
 </body>
 </html>
