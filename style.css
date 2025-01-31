@@ -21,16 +21,44 @@ h1 {
 }
 
 #target {
-  padding: 15px 30px;
+  padding: 20px 40px;
   font-size: 18px;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #target:hover {
   background-color: #0056b3;
+}
+
+#gameOver {
+  display: none;
+  margin-top: 20px;
+}
+
+#gameOver.hidden {
+  display: none;
+}
+
+#gameOver.visible {
+  display: block;
+}
+
+#restart {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#restart:hover {
+  background-color: #218838;
 }
